@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 // Employee ..
 
 abstract class Employee{
@@ -64,6 +67,33 @@ class PartTimeEmployee extends Employee{
     public double calculateSalary(){
         return hoursWorked * hourlyRate;
     }
+}
+
+// Payroll System..
+
+class PayrollSystem{
+    private ArrayList<Employee> employeeList;
+    public PayrollSystem(){
+        employeeList=new ArrayList<>();
+    }
+    // add employee..
+    public void addEmployee(Employee employee){
+        employeeList.add(employee);
+    }
+    // remove employee..
+    public void removeEmployee(int id){
+        Employee employeeToRemove =null;
+        for(Employee employee : employeeList){
+            if(employee.getid()==id){
+                employeeToRemove=employee;
+                break;
+            }
+        }
+        if(employeeToRemove != null){
+            employeeList.remove(employeeToRemove);
+        }
+    }
+    
 }
 
 
