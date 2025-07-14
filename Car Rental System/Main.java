@@ -85,7 +85,7 @@ class CarRentalSystem {
         customers = new ArrayList<>();
         rentals = new ArrayList<>();
     }
-
+    // add data ..
     public void addCar(Car car) {
         cars.add(car);
     }
